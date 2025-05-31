@@ -24,7 +24,7 @@
   <meta name="twitter:description" content="Visit my portfolio showcasing Django, Python, and full-stack development skills.">
   <meta name="twitter:image" content="https://punitkanzariya-portfolio.netlify.app/assets/img/profile-img.jpg">
 
-  <!-- Canonical (Only one per page) -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://punitkanzariya-portfolio.netlify.app/">
 
   <!-- Favicons -->
@@ -39,29 +39,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- JS Protection -->
-  <script src="assets/js/protect.js" defer></script>
+  <!-- Custom CSS for particles -->
+  <style>
+    #particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  </style>
 </head>
-
 
 <body class="index-page">
 
+  <!-- Particle Background -->
+  <div id="particles"></div>
+
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Punit</h1>
       </a>
 
@@ -86,13 +96,12 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
       <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in">
-
       <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -102,15 +111,14 @@
           </div>
         </div>
       </div>
-
     </section><!-- /Hero Section -->
 
   </main>
 
+  <!-- Footer -->
   <footer id="footer" class="footer light-background">
-
     <div class="container">
-      <div class="copyright text-center ">
+      <div class="copyright text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Punit Kanzariya</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
@@ -120,7 +128,6 @@
         <a href="https://www.linkedin.com/in/punitkanzariya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -129,7 +136,7 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -140,9 +147,35 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Particleground + jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jnicol/particleground/jquery.particleground.min.js"></script>
 
+  <!-- Particles Initialization -->
+  <script>
+    $(document).ready(function () {
+      $('#particles').particleground({
+        minSpeedX: 0.1,
+        maxSpeedX: 0.7,
+        minSpeedY: 0.1,
+        maxSpeedY: 0.7,
+        directionX: 'center',
+        directionY: 'center',
+        density: 10000,
+        dotColor: '#666666',
+        lineColor: '#666666',
+        particleRadius: 7,
+        lineWidth: 1,
+        curvedLines: false,
+        proximity: 100,
+        parallax: true,
+        parallaxMultiplier: 5
+      });
+    });
+  </script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
