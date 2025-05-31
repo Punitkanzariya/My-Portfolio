@@ -24,10 +24,7 @@
   <meta name="twitter:description" content="Visit my portfolio showcasing Django, Python, and full-stack development skills.">
   <meta name="twitter:image" content="https://punitkanzariya-portfolio.netlify.app/assets/img/profile-img.jpg">
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://punitkanzariya-portfolio.netlify.app/">
-
-  <!-- Favicons -->
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/profile-img.jpg">
 
@@ -39,35 +36,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS -->
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS -->
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Custom CSS for particles -->
+  <!-- Particles.js style -->
   <style>
-    #particles {
-      position: fixed;
+    #particles-js {
+      position: absolute;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
-      z-index: -1;
+      z-index: 0;
+    }
+    #hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    #hero {
+      position: relative;
+      overflow: hidden;
     }
   </style>
+
+  <!-- JS Protection -->
+  <script src="assets/js/protect.js" defer></script>
 </head>
 
 <body class="index-page">
 
-  <!-- Particle Background -->
-  <div id="particles">
-
-  <!-- Header -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
@@ -90,18 +94,21 @@
         <a href="https://github.com/Punitkanzariya" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.facebook.com/share/1FtZm2MvQf/" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/punit.4706?igsh=OGQ5ZDc2ODk2ZA==" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/punitkanzariya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/punitkanzariya" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
   </header>
 
-  <!-- Main -->
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- Hero Section with particles.js -->
     <section id="hero" class="hero section">
-<!--       <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in"> -->
+
+      <!-- Particle Background -->
+      <div id="particles-js"></div>
+
+      <!-- Hero Content -->
       <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -111,32 +118,31 @@
           </div>
         </div>
       </div>
-    </section><!-- /Hero Section -->
+
+    </section>
 
   </main>
-</div>
-  <!-- Footer -->
+
   <footer id="footer" class="footer light-background">
     <div class="container">
       <div class="copyright text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Punit Kanzariya</strong> <span>All Rights Reserved<br></span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Punit Kanzariya</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="https://github.com/Punitkanzariya" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.facebook.com/share/1FtZm2MvQf/"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/punit.4706?igsh=OGQ5ZDc2ODk2ZA=="><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/punitkanzariya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/punit.4706"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/punitkanzariya"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS -->
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -147,35 +153,61 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Particleground + jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/jnicol/particleground/jquery.particleground.min.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-  <!-- Particles Initialization -->
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Particles.js Config -->
   <script>
-    $(document).ready(function () {
-      $('#particles').particleground({
-        minSpeedX: 0.1,
-        maxSpeedX: 0.7,
-        minSpeedY: 0.1,
-        maxSpeedY: 0.7,
-        directionX: 'center',
-        directionY: 'center',
-        density: 10000,
-        dotColor: '#666666',
-        lineColor: '#666666',
-        particleRadius: 7,
-        lineWidth: 1,
-        curvedLines: false,
-        proximity: 100,
-        parallax: true,
-        parallaxMultiplier: 5
-      });
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 50,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
     });
   </script>
 
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
