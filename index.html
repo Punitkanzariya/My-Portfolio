@@ -24,7 +24,10 @@
   <meta name="twitter:description" content="Visit my portfolio showcasing Django, Python, and full-stack development skills.">
   <meta name="twitter:image" content="https://punitkanzariya-portfolio.netlify.app/assets/img/profile-img.jpg">
 
+  <!-- Canonical (Only one per page) -->
   <link rel="canonical" href="https://punitkanzariya-portfolio.netlify.app/">
+
+  <!-- Favicons -->
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/profile-img.jpg">
 
@@ -46,29 +49,10 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Particles.js style -->
-  <style>
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-    #hero .container {
-      position: relative;
-      z-index: 1;
-    }
-    #hero {
-      position: relative;
-      overflow: hidden;
-    }
-  </style>
-
   <!-- JS Protection -->
   <script src="assets/js/protect.js" defer></script>
 </head>
+
 
 <body class="index-page">
 
@@ -76,6 +60,8 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Punit</h1>
       </a>
 
@@ -94,7 +80,7 @@
         <a href="https://github.com/Punitkanzariya" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.facebook.com/share/1FtZm2MvQf/" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/punit.4706?igsh=OGQ5ZDc2ODk2ZA==" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/punitkanzariya" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/punitkanzariya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -102,13 +88,11 @@
 
   <main class="main">
 
-    <!-- Hero Section with particles.js -->
+    <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <!-- Particle Background -->
-      <div id="particles-js"></div>
+      <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in">
 
-      <!-- Hero Content -->
       <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -119,24 +103,27 @@
         </div>
       </div>
 
-    </section>
+    </section><!-- /Hero Section -->
 
   </main>
 
   <footer id="footer" class="footer light-background">
+
     <div class="container">
-      <div class="copyright text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Punit Kanzariya</strong> <span>All Rights Reserved</span></p>
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Punit Kanzariya</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="https://github.com/Punitkanzariya" class="github"><i class="bi bi-github"></i></a>
         <a href="https://www.facebook.com/share/1FtZm2MvQf/"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/punit.4706"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/punitkanzariya"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/punit.4706?igsh=OGQ5ZDc2ODk2ZA=="><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/punitkanzariya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
+
   </footer>
 
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
@@ -156,58 +143,6 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Particles.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <!-- Particles.js Config -->
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 50,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#ffffff" },
-        "shape": {
-          "type": "circle",
-          "stroke": { "width": 0, "color": "#000000" }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 4,
-          "direction": "none",
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": {
-          "repulse": { "distance": 100 },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
-
 </body>
+
 </html>
