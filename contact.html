@@ -46,6 +46,47 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Contact Section Layout Fix */
+    .contact .row {
+      display: flex;
+      align-items: stretch;
+      margin: 0 -15px;
+    }
+    
+    .contact .col-lg-5,
+    .contact .col-lg-7 {
+      padding: 0 15px;
+      margin-bottom: 2rem;
+    }
+    
+    /* Ensure equal height for both columns */
+    .contact .info-wrap,
+    .contact .php-email-form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Make iframe flexible within info-wrap */
+    .contact .info-wrap iframe {
+      flex-grow: 1;
+      min-height: 270px;
+    }
+    
+    /* Responsive behavior for mobile */
+    @media (max-width: 991px) {
+      .contact .row {
+        flex-direction: column;
+      }
+      
+      .contact .col-lg-5,
+      .contact .col-lg-7 {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body class="contact-page">
