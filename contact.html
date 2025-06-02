@@ -67,12 +67,23 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      border-radius: 15px;
     }
     
     /* Make iframe flexible within info-wrap */
     .contact .info-wrap iframe {
       flex-grow: 1;
       min-height: 270px;
+      border-radius: 10px;
+    }
+    
+    /* Add border radius to form elements */
+    .contact .form-control {
+      border-radius: 8px;
+    }
+    
+    .contact button[type="submit"] {
+      border-radius: 25px;
     }
     
     /* Responsive behavior for mobile */
