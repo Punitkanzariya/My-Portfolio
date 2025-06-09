@@ -1,18 +1,1 @@
-[build]
-  publish = "build"
-  command = "npm run build"
 
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "build"
-  prettyURLs = true
-  trailingSlash = false
-
-[[plugins]]
-package = "netlify-plugin-submit-sitemap"
-
-  [plugins.inputs]
-  baseUrl = "https://punitkanzariya-portfolio.netlify.app"
-  sitemapPath = "/sitemap.xml"
