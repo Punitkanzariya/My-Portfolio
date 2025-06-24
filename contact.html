@@ -211,11 +211,6 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="g-recaptcha" data-sitekey="6LfMtmsrAAAAAG_xKhRDA2AWdOl29VROTRKDGf2s"></div>
-                </div>
-
-            
-                <div class="col-md-12 text-center">
                   <div id="loading" style="display:none;">Loading...</div>
                   <div id="success-message" style="display:none; color:green;">Your message has been sent. Thank you!</div>
                   <div id="error-message" style="display:none; color:red;">There was an error. Please try again later.</div>
@@ -270,47 +265,42 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-  function sendEmail(event) {
-    event.preventDefault();
-
-    const recaptchaToken = grecaptcha.getResponse();
-    if (!recaptchaToken) {
-      document.getElementById("error-message").textContent = "Please verify that you're not a robot.";
-      document.getElementById("error-message").style.display = "block";
-      return;
+  You said:
+<script>
+    // Initialize EmailJS
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent default form submission
+  
+      // Display loading message
+      document.getElementById("loading").style.display = "block";
+  
+      // Collect form data
+      const formData = {
+        user_name: document.getElementById("name-field").value,
+        user_email: document.getElementById("email-field").value,
+        subject: document.getElementById("subject-field").value,
+        message: document.getElementById("message-field").value,
+      };
+  
+      // Send the email using EmailJS
+      emailjs
+        .send("service_3zyyndh", "template_8vkoo2x", formData)
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("success-message").style.display = "block";
+          },
+          function (error) {
+            console.log("FAILED...", error);
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("error-message").style.display = "block";
+          }
+        );
     }
-
-    document.getElementById("loading").style.display = "block";
-
-    const formData = {
-      user_name: document.getElementById("name-field").value,
-      user_email: document.getElementById("email-field").value,
-      subject: document.getElementById("subject-field").value,
-      message: document.getElementById("message-field").value,
-      "g-recaptcha-response": recaptchaToken // for optional backend validation
-    };
-
-    emailjs
-      .send("service_3zyyndh", "template_8vkoo2x", formData)
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          document.getElementById("loading").style.display = "none";
-          document.getElementById("success-message").style.display = "block";
-          grecaptcha.reset(); // reset captcha for next use
-        },
-        function (error) {
-          console.log("FAILED...", error);
-          document.getElementById("loading").style.display = "none";
-          document.getElementById("error-message").style.display = "block";
-        }
-      );
-  }
-</script>
+  </script>
 
   
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
