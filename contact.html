@@ -225,10 +225,26 @@
                     </p>
                     <canvas id="captcha-canvas" class="captcha-canvas" width="300" height="100"></canvas>
                     <div class="d-flex justify-content-center gap-2 mb-3">
-                      <button type="button" class="captcha-refresh" onclick="generateCaptcha()">
+                      <button type="button" class="captcha-refresh" onclick="generateCaptcha()" style="
+        background-color: #4299e1;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      " onmouseover="this.style.backgroundColor='#3182ce'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.15)'"
+                        onmouseout="this.style.backgroundColor='#4299e1'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
                         <i class="bi bi-arrow-clockwise"></i> New Code
                       </button>
-                      <button type="button" class="captcha-refresh" onclick="playAudio()">
+                      <button type="button" class="captcha-refresh" onclick="playAudio()" style="background-color: #48bb78;color: white;border: none;padding: 8px 16px;border-radius: 6px;font-size: 0.875rem;cursor: pointer;display: flex;align-items: center;gap: 6px;transition: all 0.2s ease;box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      " onmouseover="this.style.backgroundColor='#38a169'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.15)'"
+                        onmouseout="this.style.backgroundColor='#48bb78'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
                         <i class="bi bi-volume-up"></i> Audio
                       </button>
                     </div>
